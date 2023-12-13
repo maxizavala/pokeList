@@ -4,15 +4,14 @@ import PokeListContainer from "./components/PokeListContainer";
 import React from 'react';
 
 const client = new ApolloClient({
-    uri: 'https://graphql-pokemon2.vercel.app/',
-    cache: new InMemoryCache(),
+  uri: 'https://beta.pokeapi.co/graphql/v1beta',
+  cache: new InMemoryCache(),
 });
 
 function App() {
     return (
         <ApolloProvider client={client}>
             <div>
-                <h2>Lista de Pokémon</h2>
                 <PokeListContainer />
             </div>
         </ApolloProvider>
